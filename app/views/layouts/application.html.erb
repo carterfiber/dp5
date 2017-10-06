@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dp5</title>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+<!-- ******************** navbar ************************** -->
+    <div class="topnav" id="myTopnav">
+      <div class="col-md-8">
+      <a href="index.html" id="home">Home</a>
+      <a href="#" id="wishlist">Wishlists</a>
+      <a href="#" id="image_curator">Image Curator</a>
+      <a href="#" id="pricing">Pricing</a>
+      <a href="#" id="sell">Sell</a>
+      <a href="#" id="registration">Sign Up</a>
+      </div>
+      <div class="col-md-4">
+
+        <ul class="nav navbar-nav navbar-right">
+  
+        
+          <% if user_signed_in? %>
+            
+            <span class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <!-- avatar -->
+                <%= current_user.name %></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+                <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+              </ul>
+            </span>
+            <!-- <ul> -->
+                <a href="#"><i class="fa fa-cart-arrow-down fa-1x" aria-hidden="true"></i> Cart  <span class="badge">1</span></a>
+              <!-- </ul> -->
+            <% else %>
+            <ul>
+              <li><%= link_to "Sign In", new_user_session_path %></li>
+            </ul>
+          <% end %>
+        </ul>    
+      </div>
+    </div>
+
+
+
+  	<div class="container-fluid">
+    	<%= yield %>
+	</div>
+  </body>
+</html>

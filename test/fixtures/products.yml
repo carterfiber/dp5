@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  category_id: 1
+  watermark: MyString
+  sku: MyString
+  status: MyString
+
+two:
+  title: MyString
+  description: MyText
+  category_id: 1
+  watermark: MyString
+  sku: MyString
+  status: MyString
