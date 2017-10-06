@@ -1,0 +1,19 @@
+
+
+
+
+<br>
+<hr>
+<!-- image gallery -->
+<div>
+	<div class="gal">
+	
+		<% @products.each do |product| %>
+		      <tr>
+            <td><%= link_to (image_tag (product.watermarked_image)), product %></td>
+		      </tr>
+		<% end %>
+
+	</div>
+</div>
+<!--  end image gallery section -->
