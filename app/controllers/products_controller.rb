@@ -17,11 +17,13 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
     @categories = Category.all
+    @sellers = Seller.all
   end
 
   # GET /products/1/edit
   def edit
     @categories = Category.all
+    @sellers = Seller.all
   end
 
   # POST /products
@@ -72,6 +74,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:title, :description, :category_id, :watermark, :sku, :status, :watermarked_image, :name, :price)
+      params.require(:product).permit(:title, :description, :category_id, :watermark, :sku, :status, :watermarked_image, :name, :price, :seller_id)
     end
 end
