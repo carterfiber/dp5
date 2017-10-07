@@ -3,4 +3,6 @@ class Product < ApplicationRecord
 
 	belongs_to :seller
 	belongs_to :category
+
+	paginates_per 10
 end
