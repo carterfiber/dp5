@@ -1,15 +1,18 @@
-<h1>All Images by <%= @seller.name %></h1>
+<div class="container">
+<h1>All Images by <em><%= @seller.name %></em></h1>
 <hr>
 <!-- image gallery -->
 <div>
 	<div class="gal">
+		<!-- <div class="zoomwall"> -->
 	
 		<% @products.each do |product| %>
 		      <tr>
             <td><%= link_to (image_tag (product.watermarked_image)), product %></td>
 		      </tr>
 		<% end %>
-
+		<!-- </div> -->
 	</div>
 </div>
 <hr>
+</div>

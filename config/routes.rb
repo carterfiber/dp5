@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :uploads
+  
+  get 'upload' => 'uploads#index'
+
   post 'add_to_cart' => 'cart#add_to_cart'
 
   get 'view_order' => 'cart#view_order'
@@ -22,8 +26,6 @@ Rails.application.routes.draw do
   get 'category' => "storefront#items_by_category"
 
   get 'seller' => "storefront#items_by_seller"
-
-  get 'all_sellers' => "products#all_sellers"
 
   devise_for :users
   resources :products

@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   end
 
   def all_sellers
-    @sellers = Seller.all
+    @sellers = Product.params(:seller_id)
   end
 
   # GET /products/1

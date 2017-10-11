@@ -421,6 +421,7 @@ GEM
     xml-simple (1.1.5)
     xpath (2.1.0)
       nokogiri (~> 1.3)
+    zoomwall (0.1.2)
 
 PLATFORMS
   ruby
@@ -433,7 +434,7 @@ DEPENDENCIES
   byebug
   cancancan
   capybara (~> 2.13)
-  carrierwave
+  carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
   devise
   figaro
@@ -456,6 +457,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
+  zoomwall
 
 BUNDLED WITH
    1.16.0.pre.2

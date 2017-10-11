@@ -1,21 +1,74 @@
-<div class="container-fluid">
+<div class="container">
 
 
 
-<h2>My Cart</h2>
+<h2 class="text-primary">My Cart</h2>
 
 <div>
   <% @line_items.each do |line_item| %>
-    <li><%= line_item.product.title %></li>
-    <li><%= number_to_currency line_item.product.price %></li>
-    <li>Qty: <%= line_item.quantity %></li>
-    <li>Subtotal: <%= number_to_currency line_item.line_item_total %></li>
+  
+ 
+ 				<table id="cart" class="table table-hover table-condensed">
+    				<thead>
+						<tr>
+							<th style="width:50%">Product</th>
+							<th style="width:10%">Price</th>
+							<th style="width:8%">Quantity</th>
+							<th style="width:22%" class="text-center">Subtotal</th>
+							<th style="width:10%"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td data-th="Product">
+								<div class="row">
+									<div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>
+									<div class="col-sm-10">
+										<h4 class="nomargin"><%= line_item.product.title.titlecase %></h4>
+										<p><%= line_item.product.description %></p>
+									</div>
+								</div>
+							</td>
+							<td data-th="Price"><%= number_to_currency line_item.product.price %></td>
+							<td data-th="Quantity">
+								<div class="panel">
+									<%= line_item.quantity %>
+								</div>
+							</td>
+							<td data-th="Subtotal" class="text-center"><%= number_to_currency line_item.line_item_total %></td>
+							<td class="actions" data-th="">
+								<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						
+						<tr>
+							<td><%= link_to "< Continue Shopping", root_path, class: "btn btn-warning" %></td>
+							<td colspan="2" class="hidden-xs"></td>
+							<td class="hidden-xs text-center"><strong><%= number_to_currency line_item.line_item_total %></strong></td>
+							
+							<td><%= link_to "Checkout >", checkout_path, class: "btn btn-success" %></td>
+						</tr>
+					</tfoot>
+				</table>
+
+
+
+
+
+
+
+
   <% end %>
 </div>
 
-<div>
-  <%= link_to "Proceed to Checkout?", checkout_path, class: "btn btn-success" %>
-</div>
+
+
+<!-- ********************************** -->
+
+
 
 
 </div>

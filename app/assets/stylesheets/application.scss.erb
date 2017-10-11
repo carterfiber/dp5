@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require zoomwall
  *= require_tree .
  *= require_self
  */
@@ -33,6 +34,7 @@ body {
 /* The hero image */
 .hero-image {
     /* The image used */
+    /*background: url(IMG_1809.jpg);*/
     /*background-image: url("assets/images/IMG_1809.jpg");*/
     
     /*background-image: url("assets/imgs/Home_Collage gerald.png");*/
@@ -302,6 +304,8 @@ h1 {
   text-align: center;
   padding-top: 15px;
   padding-bottom: 0px;
+  position: absolute;
+  /*bottom: 0;*/
 }
 
 /*.footerText {
@@ -564,13 +568,14 @@ Image credits: unsplash.com
   background-repeat: no-repeat;
 }
 .fade-carousel .slides .slide-1 {
-  background-image: url(https://s3.amazonaws.com/tts-test-upload/IMG_1809.jpg); 
+  /*background-image: url(https://s3.amazonaws.com/tts-test-upload/IMG_1809.jpg); */
+  background-image: url(https://s3.amazonaws.com/tts-test-upload/static+files/IMG_1809.jpg);
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url(https://s3.amazonaws.com/tts-test-upload/Reem_Business_Lifestyle42.jpg);
+  background-image: url(https://s3.amazonaws.com/tts-test-upload/static+files/Reem_Business_Lifestyle42.jpg);
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(https://s3.amazonaws.com/tts-test-upload/Halima_Business_Lifestyle31.jpg);
+  background-image: url(https://s3.amazonaws.com/tts-test-upload/static+files/Halima_Business_Lifestyle31.jpg);
 }
 
 /********************************/

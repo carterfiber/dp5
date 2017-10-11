@@ -37,7 +37,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'devise'
-gem 'carrierwave'
+gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem 'cancancan'
 # gem 'pry-rails'
@@ -47,6 +47,7 @@ gem 'kaminari'
 gem 'fog'
 gem 'aws-sdk-rails'
 gem 'figaro'
+gem 'zoomwall'
 # *************************************
 
 
