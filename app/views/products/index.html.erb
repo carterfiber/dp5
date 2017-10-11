@@ -1,16 +1,13 @@
-<div class="container">
-<p id="notice" class="alert-info"><%= notice %></p>
-</div>
-<div>
+
+
+
+<div class="container-fluid">
+  <p id="notice" class="alert-info"><%= notice %></p>
   <div class="row content">
     <div class="col-sm-3 col-md-3 sidenav hidden-xs">
       <h2 class="w3-text-light-gray">Admin Dashboard</h2>
       <hr>
-      
-
-      <div class="btn-group-vertical col-md-12 btn-group-lg btn-block">
-        
-          
+      <div class="btn-group-vertical col-md-12 btn-group-lg btn-block">     
           <div class="w3-bar-block">
             <span>
             <%= link_to fa_icon("Products", text: "Products", class: "fa fa-plus fa-fw"), products_path, class: "w3-bar-item w3-button w3-padding w3-text-light-gray" %>
@@ -18,106 +15,64 @@
             <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-text-light-gray w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
             <a href="#" class="w3-bar-item w3-button w3-padding w3-text-light-gray"><i class="fa fa-users fa-fw"></i>  Overview</a>
             <a href="#" class="w3-bar-item w3-button w3-padding w3-text-light-gray"><i class="fa fa-eye fa-fw"></i>  Users</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding w3-text-light-gray"><i class="fa fa-users fa-fw"></i>  Sales and Reports</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding w3-text-light-gray"><i class="fa fa-users fa-fw"></i>  Reports</a>
             <a href="#" class="w3-bar-item w3-button w3-padding w3-text-light-gray"><i class="fa fa-bullseye fa-fw"></i>  Scripts</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding w3-text-light-gray"><i class="fa fa-diamond fa-fw"></i>  Vendor Accounts</a>
-            <!-- <a href="#" class="w3-bar-item w3-button w3-padding w3-blue w3-text-light-gray"><i class="fa fa-bell fa-fw"></i>  Products</a> -->
-            <!-- 
-            <a href="#" class="w3-bar-item w3-button w3-padding w3-text-light-gray"><i class="fa fa-bank fa-fw"></i>  Subscriptions</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding w3-text-light-gray"><i class="fa fa-history fa-fw"></i>  Live Chat</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding w3-text-light-gray"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br> -->
+            <a href="#" class="w3-bar-item w3-button w3-padding w3-text-light-gray"><i class="fa fa-diamond fa-fw"></i>  Sellers</a>
           </div>
-
-
          
       </div>
-          <br />
              
       </div>
 
-      <div class="col-md-8 col-sm-9">
-        <div class="container">
-          <!-- <div class="col-md-6"> -->
+      <div class="col-md-9 col-sm-9">
+        <div class="container-fluid">
+          
             <h1>Products</h1>
-          <!-- </div> -->
-          <!-- <div class="col-md-6"> -->
+          
           <%= link_to 'New Product', new_product_path, class: "btn btn-info" %>
-          <!-- </div> -->
+          
 
-        
-           
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Thumbnail</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Category</th>
+                  <th>Price</th>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Thumbnail</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Category</th>
-      <th>Price</th>
-      <!-- could insert watermark or leave thumbnail -->
-      <!-- <th>Watermark</th> -->
+                  <th>Sku</th>
+                  <th>Status</th>
+                  <th colspan="3"></th>
+                </tr>
+              </thead>
 
-      <th>Sku</th>
-      <th>Status</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+              <tbody>
+                <% @products.each do |product| %>
+                  <tr>
+                    <td><%= image_tag product.watermarked_image.thumb %></td>
+                    <td><%= product.title %></td>
+                    <td><%= product.description %></td>
+                    <td><%= product.category.name %></td>
+                    <td><%= number_to_currency product.price %></td>
+                    <!-- <td><%= product.watermark %></td> -->
+                    <td><%= product.sku %></td>
+                    <td><%= product.status %></td>
+                    
+                    <% if can? :create, Product %>
+                    <td><%= link_to 'Show', product %></td>
+                    <% end %>
 
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= image_tag product.watermarked_image.thumb %></td>
-        <td><%= product.title %></td>
-        <td><%= product.description %></td>
-        <td><%= product.category.name %></td>
-        <td><%= number_to_currency product.price %></td>
-        <!-- <td><%= product.watermark %></td> -->
-        <td><%= product.sku %></td>
-        <td><%= product.status %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-
-      <!-- <div class="well">
-        <h4>Dashboard</h4>
-        
-      </div> -->
-      <!-- <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Users</h4>
-            <p>12,898</p> 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Contributors</h4>
-            <p>250</p> 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Downloads</h4>
-            <p>180</p> 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Subscriptions</h4>
-            <p>30%</p> 
-          </div>
-        </div>
-      </div> -->
+                    <% if can? :update, Product %>
+                    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+                    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <% end %>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
       
-    </div>
-    </div>
-    </div>
-       
-    
+          </div>
+        </div>
+      </div>  
   </div>

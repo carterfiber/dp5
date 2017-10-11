@@ -1,2 +1,15 @@
-<h1>Storefront#items_by_seller</h1>
-<p>Find me in app/views/storefront/items_by_seller.html.erb</p>
+<h1>All Images by <%= @seller.name %></h1>
+<hr>
+<!-- image gallery -->
+<div>
+	<div class="gal">
+	
+		<% @products.each do |product| %>
+		      <tr>
+            <td><%= link_to (image_tag (product.watermarked_image)), product %></td>
+		      </tr>
+		<% end %>
+
+	</div>
+</div>
+<hr>

@@ -40,11 +40,13 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'cancancan'
-gem 'pry-rails'
+# gem 'pry-rails'
 gem 'better_errors', group: :development
 gem 'binding_of_caller'
 gem 'kaminari'
 gem 'fog'
+gem 'aws-sdk-rails'
+gem 'figaro'
 # *************************************
 
 

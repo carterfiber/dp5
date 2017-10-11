@@ -5,4 +5,22 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :products
+  has_many :orders
+
+  def admin?
+    role == "admin"
+  end
+
+  # def seller?
+  #   role == "seller"
+  # end
+
+  # def buyer?
+  #   role == "buyer"
+  # end
+
+  def guest?
+    role == "guest"
+  end
+
 end
