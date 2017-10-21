@@ -42,7 +42,7 @@ gem 'mini_magick'
 gem 'cancancan'
 # gem 'pry-rails'
 gem 'better_errors', group: :development
-gem 'binding_of_caller'
+gem 'binding_of_caller', group: :development
 gem 'kaminari'
 gem 'fog'
 gem 'aws-sdk-rails'
