@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
   <div class="row">
-<h1 class="text-primary">Uploads</h1><br>
+<h1 class="text-primary">View All Uploads</h1><br>
 <%= link_to 'New Upload', new_upload_path, class: "btn btn-info" %>
 
 <hr>
@@ -12,11 +12,11 @@
     <div class="row">
       <div class="media">
           <div class="media-left">
-            <%= image_tag upload.image.thumb %>
+            <%= image_tag upload.photos[0].thumb %>
           </div>
           <div class="media-body">
-            <h4 class="media-heading text-primary">Image Title: <%= upload.title %></h4>
-            <p><%= link_to 'Show', upload %>
+            <h4 class="media-heading text-primary"><%= upload.title %></h4>
+            <p><%= link_to 'Show All', upload %>
               |
               <%= link_to 'Edit', edit_upload_path(upload) %>
               |

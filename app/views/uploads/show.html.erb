@@ -6,7 +6,10 @@
 
 				<div class="col-md-6 col-xs-6">
                     <div class="panel">
-                    	<%= image_tag @upload.image, class: "img-responsive" %><br />
+                        <h1>Title: <%= @upload.title %> </h1> 
+                        <% @upload.photos.each do |a| %>
+                    	<%= image_tag a.thumb %><br />
+                        <% end %>
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-6">

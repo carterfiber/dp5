@@ -1,5 +1,7 @@
 class Upload < ApplicationRecord
 	mount_uploader :image, ImageUploader
-	# serialize :images, JSON
+	mount_uploaders :photos, PhotoUploader
+	serialize :photos, JSON
+
 	paginates_per 3
 end

@@ -15,14 +15,14 @@
 
   <div class="form-group">
     
-    <%= form.text_field :title, id: :upload_title, placeholder: "Enter title", class: "form-control" %>
+    <%= form.text_field :title, id: :upload_title, placeholder: "Enter Title i.e. Family Reunion Photos", class: "form-control" %>
   </div>
   
 <!-- ****** drag & drop ******** -->
   <div class="form-group filesg">
-    <label>Upload Your File </label>
+    <label>Upload Photos </label>
     <!-- <input type="file" class="form-control" multiple=""> -->
-    <%= form.file_field :image, id: :upload_image, class: "form-control" %>
+    <%= form.file_field :photos, multiple: true, class: "form-control" %>
   </div>
 
 
