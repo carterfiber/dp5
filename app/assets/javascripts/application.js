@@ -10,9 +10,21 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require introjs
 //= require jquery
 //= require jquery_ujs
 //= require zoomwall
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require_tree .
+
+
+// introJs().start(#myTopnav);
+
+$(document).ready(function(){
+   setTimeout(function(){
+   	$('#notice_wrapper').fadeOut("slow", function() {
+   		$(this).remove();
+   	})
+   }, 3500);
+});

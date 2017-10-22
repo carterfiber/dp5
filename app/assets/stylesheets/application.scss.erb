@@ -11,6 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  *= require zoomwall
+ *= require introjs
  *= require_tree .
  *= require_self
  */
@@ -18,6 +19,8 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'font-awesome';
+
+
 
 
 /********************* from photography store *******************/
@@ -29,6 +32,22 @@ body {
         height: 100%;
         background-position: center;
 */         
+#notice_wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(135, 216, 211, 0.85);
+  .alert, .notice {
+    padding: 2.5rem 0;
+    text-align: center;
+    margin: 0;
+    font-size: 1.25rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+}
+
 }
 
 /* The hero image */

@@ -1,3 +1,5 @@
+//= require introjs
+
 $(document).ready(function(){
 //   $("h2").css({
 //    'font-size':'28px'});
@@ -16,11 +18,6 @@ $(document).ready(function(){
 //         scrollTop: $("#sampleImages").offset().top
 //     }, 2000);
 // });
-  $("#features").click(function() {
-    $('html, body').animate({
-        scrollTop: $("#hireMe").offset().top
-    }, 2000);
-});
- 
+
   
 })

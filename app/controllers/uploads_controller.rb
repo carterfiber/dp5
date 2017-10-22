@@ -1,10 +1,13 @@
 class UploadsController < ApplicationController
   before_action :set_upload, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /uploads
   # GET /uploads.json
   def index
-    @uploads = Upload.all.page(params[:page]).per(12)
+    # @uploads = Upload.all.page(params[:page]).per(12)
+    # @uploads = Upload.find(:all, :conditions => {:user_id => session[:user_id]})
+    @uploads = Upload.where(user_id: current_user.id).page(params[:page]).per(12)
   end
 
   # GET /uploads/1
@@ -69,6 +72,6 @@ class UploadsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def upload_params
-      params.require(:upload).permit(:title, :image, {photos: []})
+      params.require(:upload).permit(:title, :image, {photos: []}, :user_id, :name)
     end
 end

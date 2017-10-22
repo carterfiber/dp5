@@ -15,16 +15,19 @@
 
   <div class="form-group">
     
-    <%= form.text_field :title, id: :upload_title, placeholder: "Enter Title i.e. Family Reunion Photos", class: "form-control" %>
-  </div>
+    <%= form.text_field :title, id: :upload_title, placeholder: "Enter Bucket Name i.e. Family Reunion Photos", class: "form-control" %>
+    </div>
   
 <!-- ****** drag & drop ******** -->
   <div class="form-group filesg">
     <label>Upload Photos </label>
-    <!-- <input type="file" class="form-control" multiple=""> -->
     <%= form.file_field :photos, multiple: true, class: "form-control" %>
   </div>
+<!-- ******** end drag & drop ********* -->
 
+  <div class="field">
+    <%= form.hidden_field :user_id, value: current_user.id %>
+  </div>
 
   <div class="actions">
     <%= form.submit "Submit", class: "btn btn-primary" %>

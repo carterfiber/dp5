@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  errors:
+    messages:
+      extension_whitelist_error: "were submitted in an unsupported file type - allowed types: %{allowed_types}"

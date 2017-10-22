@@ -4,8 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates :name, presence: true
+
   has_many :products
   has_many :orders
+  has_many :uploads
 
   def admin?
     role == "admin"
