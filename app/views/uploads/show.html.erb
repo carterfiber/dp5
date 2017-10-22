@@ -1,18 +1,11 @@
-<p id="notice"><%= notice %></p>
+
 <div class="container">
 
 
 
 
-				<div class="col-md-6 col-xs-6">
-                    <div class="panel">
-                        <h1>Title: <%= @upload.title %> </h1> 
-                        <% @upload.photos.each do |a| %>
-                    	<%= image_tag a.thumb %><br />
-                        <% end %>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xs-6">
+				
+                <div class="col-md-4 col-xs-6">
                     <div class="panel">
                     	<h1>Title: <%= @upload.title %> </h1> 
                     	<hr>
@@ -20,7 +13,17 @@
 						<%= link_to 'Back', uploads_path, class: "btn btn-info" %>
                     </div>
                 </div>
-
+                <div class="col-md-8 col-xs-6">
+                    <div class="panel">
+                        <div class="gal">
+                        <% @upload.photos.each do |a| %>
+                        
+                        <%= image_tag a.url %><br />
+                        <% end %>
+                    </div>
+                    </div>
+                    </div>
+                </div>
 
 
 </div>

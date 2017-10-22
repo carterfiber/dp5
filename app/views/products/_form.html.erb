@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="form-group">
+  <div class="form-group filesg">
     <h4 class="h4 text-primary">Upload Product Image</h4>
     <%= form.file_field :watermarked_image %>
   </div>
@@ -34,24 +34,15 @@
     <%= form.select :category_id, @categories.collect { |c| [c.name, c.id]}, {include_blank: "Please select a category" }, class: "form-control" %>
   </div>
 
-  
-
   <div class="form-group">
- 
     <%= form.text_field :sku, id: :product_sku, placeholder: "SKU", class: "form-control" %>
   </div>
-
-  <div class="form-group">
-
-    <%= form.text_field :status, id: :product_status, placeholder: "Status", class: "form-control" %>
+  <div class="field">
+    <%= form.hidden_field :status, value: "published" %>
   </div>
-
-  <div class="form-group">
-
-    <%= form.text_field :quantity, id: :product_quantity, class: "form-control" %>
+  <div class="field">
+    <%= form.hidden_field :quantity, value: "1" %>
   </div>
-
-
 <!-- for now, making it default to $25 value - put back t text_field otherwise i.e. form.hidden_field :price, id: :product_price, placeholder: "Price", class: "form-control" -->
   <div class="form-group">
     <%= form.hidden_field :price, value: "25" %>
@@ -60,4 +51,5 @@
   <div class="actions form-group">
     <%= form.submit "Submit", class: "btn btn-primary" %>
   </div>
+
 <% end %>
