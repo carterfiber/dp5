@@ -1,5 +1,6 @@
 <!-- *************************** -->
        <div class="container">
+        <br><br><br>
           <div class="row">
                <div class="col-md-7 col-xs-4">
                     <div class="panel">
@@ -24,7 +25,7 @@
                     <%= form_tag add_to_cart_path do %>
                         <%= hidden_field_tag :product_id, @product.id %>
                         <%= hidden_field_tag :quantity, '1', class: "form-control" %>
-                        <%= submit_tag "Add to Cart", class: "btn btn-success form-control" %>
+                        <%= submit_tag "Add to Cart", class: "btn btn-success form-control", id: "cart_btn" %>
                       <% end %>
 
                     <br />
@@ -59,4 +60,4 @@
             </div>
         </div>
 </div>
-<br>
+<br><br><br>
