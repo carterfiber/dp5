@@ -48,7 +48,7 @@ gem 'fog'
 gem 'aws-sdk-rails'
 gem 'figaro'
 gem 'zoomwall'
-gem 'introjs-rails'
+gem 'introjs-rails' #might remove 
 # *************************************
 
 

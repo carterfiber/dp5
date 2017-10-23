@@ -14,6 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require zoomwall
+
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require_tree .
@@ -27,4 +28,8 @@ $(document).ready(function(){
    		$(this).remove();
    	})
    }, 2500);
+
+
+
+
 });
