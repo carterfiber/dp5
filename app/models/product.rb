@@ -5,7 +5,7 @@ class Product < ApplicationRecord
 	belongs_to :seller
 	belongs_to :category
 
-	paginates_per 12
+	paginates_per 36
 
 
 private
