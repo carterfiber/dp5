@@ -3,7 +3,7 @@
 $(document).ready(function(){
 
     var tour = new Tour({
-        storage : false
+        storage : window.localStorage
     });
  
     tour.addSteps([
