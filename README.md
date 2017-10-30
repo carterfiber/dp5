@@ -1,25 +1,11 @@
-# README
+This app can be viewed at gc-atl.herokuapp.com
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Fullstack deveopment includes:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# dp5
+-Ruby
+-Rails
+-Bootstrap
+-JQuery
+-Javascript
+-HTML/CSS
+-AWS S3 API
