@@ -1,5 +1,19 @@
 This app can be viewed at gc-atl.herokuapp.com
 
-Fullstack deveopment includes:
+**Fullstack deveopment includes:**
 
--Ruby, Rails, Bootstrap, JQuery, Javascript, HTML/CSS, AWS S3 API
+- Ruby on Rails 
+- Bootstrap
+- Bootstrap Tour
+- JQuery/JavaScript
+- HTML/CSS
+- AWS S3 API
+- User Authentication
+
+Snapshot of the Feed
+![Alt text](/app/assets/images/dp5.png?raw=true "Basic Snapshot of the homepage")
+
+**TODO**
+- Integrate Stripe
+- Continue to improve
+- Switch to AWS Elasticbeanstalk
