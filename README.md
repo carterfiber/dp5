@@ -1,4 +1,4 @@
-This app can be viewed at [gc-atl.herokuapp.com](gc-atl.herokuapp.com)
+This app can be viewed at [gc-atl.herokuapp.com]
 
 **Fullstack deveopment includes:**
 
@@ -9,6 +9,9 @@ This app can be viewed at [gc-atl.herokuapp.com](gc-atl.herokuapp.com)
 
 Snapshot of the Homepage
 ![Alt text](/app/assets/images/dp5.png?raw=true "Basic Snapshot of the homepage")
+
+GIF of the Homepage :) 
+![Alt text](/app/assets/images/dp5.gif?raw=true "Basic Snapshot of the homepage")
 
 **TODO**
 - Integrate Stripe
