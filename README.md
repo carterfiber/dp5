@@ -2,15 +2,12 @@ This app can be viewed at gc-atl.herokuapp.com
 
 **Fullstack deveopment includes:**
 
-- Ruby on Rails 
-- Bootstrap
-- Bootstrap Tour
-- JQuery/JavaScript
-- HTML/CSS
-- AWS S3 API
-- User Authentication
+- Ruby on Rails 		- Bootstrap
+- Bootstrap Tour 		- JQuery/JavaScript
+- HTML/CSS				- AWS S3 API
+- User Authentication	- 
 
-Snapshot of the Feed
+Snapshot of the Homepage
 ![Alt text](/app/assets/images/dp5.png?raw=true "Basic Snapshot of the homepage")
 
 **TODO**
